@@ -63,6 +63,7 @@ const SignIn: React.FC = () => {
         });
 
         // history.push('/dashboard');
+        // navigation.navigate('Dashboard');
       } catch (err) {
         if (err instanceof Yup.ValidationError) {
           const errors = getValidationErrors(err);
