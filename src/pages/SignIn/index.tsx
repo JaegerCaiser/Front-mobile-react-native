@@ -160,3 +160,5 @@ const SignIn: React.FC = () => {
 };
 
 export default SignIn;
+
+SignIn.displayName = 'SignIn';

@@ -2,7 +2,7 @@ import { useNavigation, useRoute } from '@react-navigation/native';
 import React, { useCallback, useEffect, useState, useMemo } from 'react';
 import Icon from 'react-native-vector-icons/Feather';
 import DateTimePicker from '@react-native-community/datetimepicker';
-import { Platform, Alert } from 'react-native';
+import { Platform, Alert, View } from 'react-native';
 import { format } from 'date-fns';
 
 import { useAuth } from '../../hooks/auth';
@@ -176,6 +176,7 @@ const CreateAppointment: React.FC = () => {
             showsHorizontalScrollIndicator={false}
             data={providers}
             keyExtractor={provider => provider.id}
+            automaticallyAdjustContentInsets
             renderItem={({ item: provider }) => (
               <ProviderContainer
                 onPress={() => handleSelectProvider(provider.id)}
